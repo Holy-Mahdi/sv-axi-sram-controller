@@ -13,5 +13,5 @@ A SystemVerilog implementation of an AXI4-Lite to SRAM controller.
 - [x] AXI4-Lite Interface Definition
 - [x] SRAM Model
 - [X] AXI to SRAM Controller Logic
-- [ ] Top Module
+- [x] Top Module
 - [ ] Testbench Environment
