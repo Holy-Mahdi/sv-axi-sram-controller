@@ -22,20 +22,16 @@ module sram_model #(
         end
     end
 
-    always_ff @(posedge clk )
+    always_ff @(posedge clk) begin
+    if (cs && we) begin
+        mem[addr] <= data_in;
+    end
     
-    begin
-        if (cs && we) begin
-            mem[addr] <= data_in;
-        end 
+    if (cs && !we) begin
+        data_out <= mem[addr]; 
+    end else begin
+        data_out <= '0;
     end
-
-    always_comb begin
-        if (cs && !we) begin
-            data_out = mem[addr];
-        end else begin
-            data_out = '0;
-        end
-    end
+end
     
 endmodule
