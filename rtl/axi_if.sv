@@ -4,7 +4,7 @@ interface axi_if #(
 
 )(
     input logic clk,
-    input logic rst_n,
+    input logic rst_n
 );
     
     logic [ADDR_WIDTH-1:0] aw_addr;
